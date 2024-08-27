@@ -6,7 +6,6 @@ struct Node {
     struct Node* left;
     struct Node* right;
 };
-
 struct Node* newNode(int item) {
     struct Node* temp = 
        (struct Node*)malloc(sizeof(struct Node));
@@ -37,7 +36,6 @@ struct Node* insert(struct Node* root, int x)
         parent->right = temp;
     return root;
 }
-
 void inorder(struct Node* root) {
     if (root != NULL) {
         inorder(root->left);
@@ -45,16 +43,15 @@ void inorder(struct Node* root) {
         inorder(root->right);
     }
 }
-
 int main() {
     
-    struct Node* root = newNode(50);
-    root = insert(root, 30);
-    root = insert(root, 20);
-    root = insert(root, 40);
-    root = insert(root, 70);
-    root = insert(root, 60);
-    root = insert(root, 80);
+    struct Node* root = newNode(100);
+    root = insert(root,30);
+    root = insert(root,20);
+    root = insert(root,40);
+    root = insert(root,70);
+    root = insert(root,60);
+    root = insert(root,80);
 
     inorder(root);
 

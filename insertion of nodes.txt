@@ -14,11 +14,8 @@ struct Node* newNode(int item) {
     temp->left = temp->right = NULL;
     return temp;
 }
-
-
 struct Node* insert(struct Node* root, int x)
 {
-
     struct Node* temp = newNode(x);
 
     if (root == NULL)
